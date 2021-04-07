@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="杜致远">
+    
+    <title>
+        
+            借助vizard创建虚拟现实环境 |
+        
+        WMDU&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/emoji_1f349.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"watermelondududu.github.io","root":"/","language":null,"path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/blackcat.jpg","favicon":"/images/emoji_1f349.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"什么令我感到强大？爱着而且工作着。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                WMDU&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">借助vizard创建虚拟现实环境</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/blackcat.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">杜致远</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-04-08 00:10:40
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7/">实验工具</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vizard/">vizard</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/htcvive/">htcvive</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>672 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>设备：HTC VIVE</p>
+<p>软件：vizard、steamVR</p>
+<p>inspector（场景编辑器）、coding（逻辑）、配置&amp;连接显示设备</p>
+<h2 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h2><ul>
+<li>demo_lancher —— 选择vive的配置文件 —— 校准中心点 —— 校准地面（尽可能准确）</li>
+</ul>
+<h2 id="创建流程"><a href="#创建流程" class="headerlink" title="创建流程"></a>创建流程</h2><p>使用前先使用steamVR校准设备。</p>
+<ol>
+<li>使用insepctor搭建/设定场景模型。</li>
+<li>点开vizard，选择vizconnet生成配置文件（.pyc）</li>
+<li>新建项目，将配置文件绑定到当前</li>
+<li>导入场景</li>
+<li>写逻辑部分，直接在vizard中运行调试</li>
+</ol>
+<h2 id="Inspector"><a href="#Inspector" class="headerlink" title="Inspector"></a>Inspector</h2><p>可对场景模型进行设定</p>
+<h2 id="coding"><a href="#coding" class="headerlink" title="coding"></a>coding</h2><ul>
+<li>vizard不支持mac</li>
+<li>pack：viz、vizact、vizshape</li>
+</ul>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 如何把代码和场景绑定？无需绑定，inspector中编辑场景即可，IDE中编辑逻辑</li>
+<li><input checked="" disabled="" type="checkbox"> ontimer函数</li>
+<li><input checked="" disabled="" type="checkbox"> 文档在哪里：<a class="link"   target="_blank" rel="noopener" href="https://docs.worldviz.com/vizard/latest/#Tutorial_Guide.htm" >官方文档<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<ul>
+<li><p>场景文件：.osgb</p>
+</li>
+<li><p>左手坐标系，大拇指、食指、中指分别为：xyz轴</p>
+</li>
+<li><p>可查阅文档</p>
+</li>
+<li><p>基础操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> viz</span><br><span class="line"><span class="keyword">import</span> vizact</span><br><span class="line"><span class="keyword">import</span> vizshape</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建场景</span></span><br><span class="line">viz.go()</span><br><span class="line"><span class="comment"># 加载自带的piazza场景</span></span><br><span class="line">piazza = viz.add(<span class="string">&quot;piazza.osgb&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 抗锯齿等级，可根据机器性能调整</span></span><br><span class="line">viz.setMultiSample(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加坐标轴显示</span></span><br><span class="line">vizshape.addAxes()</span><br><span class="line"><span class="comment"># 添加碰撞效果（会把位置置为水平</span></span><br><span class="line">viz.MainView.collision()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 位置、视角、视场角设置</span></span><br><span class="line">viz.MainView.setPosition([<span class="number">0</span>,<span class="number">15</span>,-<span class="number">15</span>])</span><br><span class="line">viz.MainView.move([<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>])</span><br><span class="line">viz.MainView.setEuler([<span class="number">180</span>,<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line">viz.fov(<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加自带的植物模型</span></span><br><span class="line">plant = viz.addChild(<span class="string">&#x27;plant.osgb&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plants = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [-<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>]:</span><br><span class="line">  <span class="keyword">for</span> z <span class="keyword">in</span> [<span class="number">4</span>,<span class="number">2</span>,<span class="number">0</span>,-<span class="number">2</span>,-<span class="number">4</span>]:</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment">#旋转，参数：xyzs，沿xyz轴以s速度旋转</span></span><br><span class="line">mySpin = vizact.spin(<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">15</span>)</span><br><span class="line">plant.addAction(mySpin)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 停止动作</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myClearAction</span>(<span class="params">plantOBJ</span>):</span></span><br><span class="line">  plantOBJ.clearactions()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 旋转函数，旋转然后停止旋转</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mySpinPlant</span>(<span class="params">plantOBJ</span>):</span></span><br><span class="line">  plantOBJ.addAction(mySpin)</span><br><span class="line"> 	vizact.ontimer2(<span class="number">1</span>,<span class="number">1</span>,myClearAction, plantOBJ)</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 1s一次，执行19次mySpinPlant函数，vizact.choice会顺序选择plant数组里的内容</span></span><br><span class="line">vizact.ontimer2(<span class="number">1</span>,<span class="number">19</span>, mySpinPlant, vizact.choice(plants))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> viz</span><br><span class="line"><span class="keyword">import</span> vizinput</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建输入窗口</span></span><br><span class="line">username = vizinput.<span class="built_in">input</span>(<span class="string">&#x27;请输入您的名字&#x27;</span>)</span><br><span class="line">sex = vizinput.<span class="built_in">input</span>(<span class="string">&#x27;性别&#x27;</span>)</span><br><span class="line">age = vizinput.<span class="built_in">input</span>(<span class="string">&#x27;年龄&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把实验对象的信息存入文档中</span></span><br><span class="line">filename = viz.res.getPublishPath(username + <span class="string">&#x27;_data.txt&#x27;</span>)</span><br><span class="line">file = <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">line = username + sex + age</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file) <span class="keyword">as</span> f:</span><br><span class="line">  f.write(line)</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 保存时间戳和位置信息</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">saveData</span>():</span></span><br><span class="line">  currentTime = viz.tick() <span class="comment">#时间戳</span></span><br><span class="line">  pos = viz.MainView.getPosition()</span><br><span class="line">  </span><br><span class="line">  line = <span class="built_in">str</span>(currentTime) + <span class="string">&#x27;\t&#x27;</span> + <span class="built_in">str</span>(pos)</span><br><span class="line">  file.write(line)</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 0表示一直执行</span></span><br><span class="line">vizact.onupdate(<span class="number">0</span>, saveData)</span><br><span class="line"></span><br><span class="line">viz.setMultiSample(<span class="number">4</span>)</span><br><span class="line">piazza = viz.add(<span class="string">&#x27;piazza.osgb&#x27;</span>)</span><br><span class="line">viz.go()</span><br><span class="line">male = viz.addAvatar(<span class="string">&#x27;vcc_male.cfg&#x27;</span>)</span><br><span class="line">male.setPosition([<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line"><span class="comment"># 设置人物的状态（会有动作）</span></span><br><span class="line">male.state(<span class="number">14</span>)</span><br><span class="line"></span><br><span class="line">female = viz.add(<span class="string">&#x27;vcc_female.cfg&#x27;</span>)</span><br><span class="line">female.setPosition([<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">global</span> stateID</span><br><span class="line">stateID = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 做一遍所有的动作</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showAllState</span>(<span class="params">myAvatar</span>):</span></span><br><span class="line">  <span class="keyword">global</span> stateID</span><br><span class="line">  myAvatar.state(stateID)</span><br><span class="line">  stateID += <span class="number">1</span></span><br><span class="line">  </span><br><span class="line">vizact.ontimer2(<span class="number">3</span>,<span class="number">15</span>, showAllState, male)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 走动函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">walkAvatars</span>():</span></span><br><span class="line">  walkFemale = vizact.walkTo([<span class="number">4</span>,<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line">  vizact.ontimer2(<span class="number">0.5</span>, <span class="number">0</span> , female.addAction(walkFemale), female)</span><br><span class="line">  walkMale = vizact.walkTo([<span class="number">4</span>,<span class="number">0</span>,<span class="number">0</span>])</span><br><span class="line">  male.addAction(walkMale)</span><br><span class="line">  </span><br><span class="line">vizact.onkeydown(<span class="string">&#x27;w&#x27;</span>, walkAvatars)</span><br></pre></td></tr></table></figure>
+
+<h2 id="vizconnet"><a href="#vizconnet" class="headerlink" title="vizconnet"></a>vizconnet</h2><p>​    生成配置文件，添加到viz.go()</p>
+<p>明天：脑电仪</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/07/Biopac-MP160%E5%9E%8B16%E9%80%9A%E9%81%93%E7%94%9F%E7%90%86%E8%AE%B0%E5%BD%95%E4%BB%AA/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Biopac MP160型16通道生理记录仪操作</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2018</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">杜致远</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DEMO"><span class="nav-text">DEMO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B"><span class="nav-text">创建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inspector"><span class="nav-text">Inspector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#coding"><span class="nav-text">coding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vizconnet"><span class="nav-text">vizconnet</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":null,"model":{"jsonPath":"/live2dw/umaru.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":30},"mobile":{"show":true,"scale":0.5},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
