@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="杜致远">
+    
+    <title>
+        
+            【iOS】“绝地打靶”基础逻辑实现 |
+        
+        WMDU&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/emoji_1f349.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"watermelondududu.github.io","root":"/","language":null,"path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/blackcat.jpg","favicon":"/images/emoji_1f349.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"什么令我感到强大？爱着而且工作着。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                WMDU&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">【iOS】“绝地打靶”基础逻辑实现</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/blackcat.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">杜致远</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2018-12-28 22:33:52
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/coding/">coding</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>642 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+<h2 id="今日实现成果"><a href="#今日实现成果" class="headerlink" title="今日实现成果"></a>今日实现成果</h2><p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/51076038" >让不懂编程的人爱上iPhone开发(2018秋iOS12+Swift4.2+Xcode10版)<i class="fas fa-external-link-alt"></i></a>#3、#4、#5、#6、#7、#8、#9</p>
+<p>昨天晚上结束时：<br><img src="https://upload-images.jianshu.io/upload_images/12169754-b465b06b91fcdc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="竖屏"></p>
+<p>今天先调整了竖屏为横屏状态，开始在横竖屏适配方面发生了一些移位，适配了一下，可以实现即时手机竖直打开也是横屏的效果<br><img src="https://upload-images.jianshu.io/upload_images/12169754-adf980f9a5438a57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手机横屏时横屏显示"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12169754-30ed4eba1179e0cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手机竖屏时也是横向显示"></p>
+<p>然后就是最后实现的成果图了（中间过程忘记截图QAQ）<br><img src="https://upload-images.jianshu.io/upload_images/12169754-105e4ba72d3de4d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="滑动滑块前"><br><img src="https://upload-images.jianshu.io/upload_images/12169754-d79f1c2f4e5c639b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="滑动后"></p>
+<h2 id="基础逻辑"><a href="#基础逻辑" class="headerlink" title="基础逻辑"></a>基础逻辑</h2><ol>
+<li>每次产生1-100之间的随机数，作为本回合的目标值</li>
+<li>玩家按照估计目标值所在的位置滑动滑块</li>
+<li>点击“东方之猪请点”按钮查看成绩</li>
+<li>显示本回合目标与实际成绩，显示猪手准确度</li>
+<li>更新累计得分与回合数与下一轮的目标值</li>
+<li>玩家点击确认可以开始下一轮滑动打靶</li>
+</ol>
+<h2 id="今日份学习内容"><a href="#今日份学习内容" class="headerlink" title="今日份学习内容"></a>今日份学习内容</h2><ol>
+<li><p>始终需要横向展示的内容在：XXX（项目名称）-&gt; general -&gt; Deployment Info 中取消选择Portrait即可<br><img src="https://upload-images.jianshu.io/upload_images/12169754-2f52a8b4709080c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="截图"></p>
+</li>
+<li><p>在界面中显示变化的label，使用scoreLabel.text = String(score)这样的句式，即可让界面中label的文字随着score变化而变化</p>
+</li>
+<li><p>slide部件的使用</p>
+</li>
+<li><p>lroundf()对浮点数四舍五入取整</p>
+</li>
+<li><p>随机数：targetValue = Int.random(in: 1…100)</p>
+</li>
+<li><p>将图形界面与代码中的内容关联起来的方法</p>
+</li>
+<li><p>swift会对没有指定类型的变量进行类型推断，可以在该变量处按住alt键，点击出现的问号，即可看到推断的类型，以及该变量定义的位置<br><img src="https://upload-images.jianshu.io/upload_images/12169754-ed82ea23f09d79d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自动类型推断"></p>
+</li>
+<li><p>再次吸收了，“代码不要复制粘贴”，极力避免重复代码，这样的经验。虽然以前就知道，但是有时候还是忍不住犯懒，出现了重复的代码也懒得整理到一起，确实在后期想改逻辑的时候。。。。。。引发了许多bug，以后要注意代码规范性，在可以的情况下，都要杜绝重复代码💪！</p>
+</li>
+</ol>
+<h2 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h2><p>其实整个流程走下来没要太多时间，本来打算今天就把整个系列（1-16）做完的，晚上有点放飞自我，沉迷上了可爱的动物书包🐒，还有DIY小屋，晚上就没做太多了，不过没有关系，保持开心和学习的热情就行～</p>
+<p>可能最近几天需要做一下年终总结与新年规划了，现在脑子里其实还是有点乱的，期待理清思路，元气满满的开始新的一年！</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2018/12/29/%E3%80%90iOS%E3%80%91%E2%80%9C%E7%BB%9D%E5%9C%B0%E6%89%93%E9%9D%B6%E2%80%9D%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0%E5%8F%8A%E9%80%82%E9%85%8D/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【iOS】“绝地打靶”图形界面实现及适配</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2018/12/26/%E3%80%90%E9%9A%8F%E7%AC%94%E3%80%91%E5%88%9D%E8%AF%95%E5%90%8E/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【随笔】初试后</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2018</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">杜致远</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E5%AE%9E%E7%8E%B0%E6%88%90%E6%9E%9C"><span class="nav-text">今日实现成果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E9%80%BB%E8%BE%91"><span class="nav-text">基础逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8A%E6%97%A5%E4%BB%BD%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9"><span class="nav-text">今日份学习内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-text">一些碎碎念</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":null,"model":{"jsonPath":"/live2dw/umaru.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":30},"mobile":{"show":true,"scale":0.5},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

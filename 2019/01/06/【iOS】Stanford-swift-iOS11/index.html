@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="杜致远">
+    
+    <title>
+        
+            【iOS】Stanford swift+iOS11 |
+        
+        WMDU&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/emoji_1f349.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"watermelondududu.github.io","root":"/","language":null,"path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/blackcat.jpg","favicon":"/images/emoji_1f349.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"什么令我感到强大？爱着而且工作着。"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                WMDU&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">【iOS】Stanford swift+iOS11</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/blackcat.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">杜致远</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2019-01-06 22:14:50
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/coding/">coding</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>904 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <meta name="referrer" content="no-referrer"/>
+
+<h2 id="关于斯坦福公开课"><a href="#关于斯坦福公开课" class="headerlink" title="关于斯坦福公开课"></a>关于斯坦福公开课</h2><p>总共是16次正课+3次可选课<br>今天看完了#1以及#2的一半，不得不说，斯坦福公开课的教学质量非常高。</p>
+<p>首先，教授的态度就不同于我所接触到的很多大学教授，他开讲之前就说apple有很多很cool的产品，app store中有很多很cool的app，我们要学习的swift是一门年轻的同时也很cool的语言，从中能感受到教授对于他要传授给人的东西有很高的热情，这种热情其实是会不自觉感染学生的，在跟随这样的教授学习的过程中，也会慢慢觉得，我在学的在做的是很cool的东西。</p>
+<p>然后在讲解的过程中，老师很注重工具的使用，用实例app比较大体上展示了Xcode的各个部分有什么用处。亲身示范边敲代码边教学。把实践融入到整个教学的过程中。</p>
+<p>第一次在上编程课的时候有了一种被“授人以渔”的感觉，教授说你要是用一个对象的方法，你可以直接猜测，有什么关键词，然后根据自动补全提示，来猜测哪个method是你想要的，如果不能确定，可以点进去看说明文档。</p>
+<p>这对于长期习惯于先看经典的类包含了哪些方法，记下来，在用到的时候根据记忆去使用这样的学习流程的我，是一个很大的震撼。这其实是一种，用到的时候再去学的方法，大大减轻了前期的学习负担，而是强调理解查找，现学现用的能力。</p>
+<p>在学生时代总是追求系统而全面的学习知识，这当然是更扎实的方法，但有多少次，还没来得及扎实的掌握，就已经败在了如山的等待学习的知识面前。在实际的项目中，快速开始，快速学习，快速运用，才是一种更为可贵的能力。</p>
+<h2 id="知识点记录"><a href="#知识点记录" class="headerlink" title="知识点记录"></a>知识点记录</h2><ol>
+<li><p><img src="https://upload-images.jianshu.io/upload_images/12169754-427d73092657c832.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=" ">按这个小圈圈可以让代码和ui界面同时出现</p>
+</li>
+<li><p>按住option键，移动鼠标可显示详细信息，比如移动到某一个method上可以显示它的使用方法，传入参数等</p>
+</li>
+<li><p>属性观察器<br>每当变量值发生改变，didSet中的代码都会执行</p>
+</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flipCount <span class="operator">=</span> <span class="number">0</span> &#123;</span><br><span class="line">  <span class="keyword">didSet</span> &#123;</span><br><span class="line">    flipCountLabel.text <span class="operator">=</span> <span class="string">&quot;flips:<span class="subst">\(flipCount)</span>&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>数组的写法</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@IBOutlet</span> <span class="keyword">var</span> cardButtons:[<span class="type">UIButton</span>]<span class="operator">!</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>command键<br> 使用rename来重命名代码和界面共有的代码<img src="https://upload-images.jianshu.io/upload_images/12169754-a52fc4025db2e02c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="command快捷键"></p>
+</li>
+<li><p> optional 只有已设置和缺省两种情况，在已设置是可以关联其设置的值究竟为多少，optional（1），表示已设置且值为1，nil表示缺省</p>
+</li>
+<li><p> ！的作用，假设可选类型已设置值的话，取其关联值返回，optional（1）将返回1，但若可选类型未设置值，将导致崩溃</p>
+</li>
+<li><p>创建string类型数组<br> <img src="https://upload-images.jianshu.io/upload_images/12169754-f43bba8579d4e638.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="string数组"></p>
+</li>
+<li><p> 参数可以有两个名字</p>
+</li>
+<li><p> 一个参数可以有两个名称，第一个是外部名称，第二个是在函数内部名称</p>
+</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">init</span> (<span class="params">identifier</span> <span class="params">i</span>: <span class="type">Int</span>)</span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+
+<ol start="11">
+<li>for循环的写法以及countabaleRange</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> identifier <span class="keyword">in</span> <span class="number">0</span><span class="operator">..&lt;</span>numbersOfPairsOfCards&#123;&#125; <span class="comment">//1~</span></span><br><span class="line"><span class="keyword">for</span> identifier <span class="keyword">in</span> <span class="number">1</span><span class="operator">...</span>numbersOfPairsOfCards&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li>存入数组尾部的方法</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cards.append(card)</span><br><span class="line">cards <span class="operator">+=</span> [card, card]</span><br></pre></td></tr></table></figure>
+
+<ol start="13">
+<li>静态成员及成员函数写法</li>
+</ol>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">var</span> identifierFactory <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">getUniqueIdentifier</span>()</span> -&gt; <span class="type">Int</span>&#123;</span><br><span class="line">		identifierFactory <span class="operator">+=</span> <span class="number">1</span></span><br><span class="line">      <span class="keyword">return</span> identifierFactory</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li>lazy var<br>惰性变量意味着：直到有人想要抓取它时才会被初始化<br>但此时不能使用didSet</li>
+</ol>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/09/02/%E9%A2%91%E5%8F%91%E7%9A%84%E6%80%A7%E4%BE%B5%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA%E6%A1%88%E8%83%8C%E5%90%8E%EF%BC%9A%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E6%B8%A9%E6%9F%94%E4%B8%94%E4%B8%8D%E2%80%9C%E5%AE%BD%E5%AE%B9%E2%80%9D%E7%9A%84%E6%B3%95%E5%BE%8B/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">频发的性侵未成年人案背后：我们需要更温柔且不“宽容”的法律</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2019/01/05/%E3%80%90iOS%E3%80%91%E2%80%9C%E7%BB%9D%E5%9C%B0%E6%89%93%E9%9D%B6%E2%80%9D%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%AE%8C%E6%88%90%EF%BC%8Cgit%E5%AD%A6%E4%B9%A0/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【iOS】“绝地打靶”小游戏完成，git学习</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2018</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">杜致远</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%96%AF%E5%9D%A6%E7%A6%8F%E5%85%AC%E5%BC%80%E8%AF%BE"><span class="nav-text">关于斯坦福公开课</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%E8%AE%B0%E5%BD%95"><span class="nav-text">知识点记录</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":null,"model":{"jsonPath":"/live2dw/umaru.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":30},"mobile":{"show":true,"scale":0.5},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
