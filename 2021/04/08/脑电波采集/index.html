@@ -9,7 +9,7 @@
     
     <title>
         
-            交互设计暑假总结2 |
+            脑电波采集 |
         
         WMDU&#39;s Blog
     </title>
@@ -160,7 +160,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">交互设计暑假总结2</span>
+            <span class="title-hover-animation">脑电波采集</span>
         </div>
 
         
@@ -176,15 +176,37 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2018-07-13 09:00:26
+        <i class="fas fa-edit"></i>&nbsp;2021-04-08 18:53:36
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7/">实验工具</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%84%91%E7%94%B5/">脑电</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>196 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>437 字</span>
         </span>
     
     
@@ -201,39 +223,61 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="DAY2"><a href="#DAY2" class="headerlink" title="DAY2"></a>DAY2</h1><p>#暑假课程</p>
-<ul>
-<li>人体工程学可做考虑点</li>
+            <h2 id="EEG-ERP的生理机制"><a href="#EEG-ERP的生理机制" class="headerlink" title="EEG/ERP的生理机制"></a>EEG/ERP的生理机制</h2><ul>
+<li>神经元放电产生，uv级别电流，传导到头皮，易受到干扰</li>
+<li>神经元群同步放电，且神经元排列方式一致，形成开放电场才能被记录（方向不一致相互抵消）</li>
+<li><input disabled="" type="checkbox"> 什么因素会影响神经元排列方式？</li>
 </ul>
-<p><img src="DAY2/37FE8B63-BF0E-4387-B796-7FEB336C0362.png"></p>
-<span id="more"></span>
-
-<h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><ul>
-<li>社区生活：小区、医院、菜市场、</li>
-<li>显示子女的某些状态，转移到老人身边的实物上</li>
-<li>电子公告聊天牌（社区排行，红包，多考虑语音交互通知以语音形式发送）</li>
+<h2 id="EEG的信号记录"><a href="#EEG的信号记录" class="headerlink" title="EEG的信号记录"></a>EEG的信号记录</h2><ul>
+<li>头皮脑电的节律一般在0.1～100Hz之间</li>
+<li>频段划分（1-4Alpha、4-8beta、8-13、13-30、30-100）不同脑电频段有不同的生理含义</li>
 </ul>
-<h2 id="问题三"><a href="#问题三" class="headerlink" title="问题三"></a>问题三</h2><ul>
-<li>破题思路除了 <ul>
-<li>对问题的处理（走丢找回等）</li>
-<li>还有 症状缓解</li>
-<li>以及 疾病预防</li>
+<h2 id="ERP基础"><a href="#ERP基础" class="headerlink" title="ERP基础"></a>ERP基础</h2><h3 id="Event-Related-Potentials，事件相关电位）"><a href="#Event-Related-Potentials，事件相关电位）" class="headerlink" title="Event-Related Potentials，事件相关电位）"></a>Event-Related Potentials，事件相关电位）</h3><ul>
+<li>外加特定刺激（给予或撤销刺激都算）时引起机体神经系统电位变化</li>
+<li>ERP可能会淹没在EEG背景信号中（小信号大噪音）</li>
+<li>ERP波形提取：叠加平均<ul>
+<li>多次（10次左右）叠加，EEG由于是随机背景，出现叠加抵消，保留下ERP波形</li>
 </ul>
 </li>
 </ul>
-<h2 id="盲人"><a href="#盲人" class="headerlink" title="盲人"></a>盲人</h2><ul>
-<li>初次使用的指导</li>
-<li>触觉和听觉的敏感（振动不能过于频繁）</li>
-<li>界面的复杂程度需要注意</li>
-<li>注意反馈问题（in &amp; out）</li>
+<h3 id="ERP研究的经典范式"><a href="#ERP研究的经典范式" class="headerlink" title="ERP研究的经典范式"></a>ERP研究的经典范式</h3><ul>
+<li>Oddball范式<ul>
+<li>两种不同刺激，出现概率显著不同，要求被试对小概率刺激（靶刺激）做出反应</li>
 </ul>
-<h2 id="老人"><a href="#老人" class="headerlink" title="老人"></a>老人</h2><ul>
-<li>字大</li>
-<li>产品简单，易学</li>
-<li>针对老人的体能、反应速度做针对性的考虑</li>
+</li>
+<li>Go-Nogo范式<ul>
+<li>两种不同刺激，出现概率相同</li>
 </ul>
-<h2 id="交互设计知识整理（-任祚承学长）"><a href="#交互设计知识整理（-任祚承学长）" class="headerlink" title="交互设计知识整理（@任祚承学长）"></a>交互设计知识整理（@任祚承学长）</h2><p><img src="DAY2/1581533444633_.pic_hd.jpg"></p>
-
+</li>
+</ul>
+<h3 id="常见ERP成分分类"><a href="#常见ERP成分分类" class="headerlink" title="常见ERP成分分类"></a>常见ERP成分分类</h3><ul>
+<li>外源性成分</li>
+<li>内源性成分</li>
+<li>中性成分</li>
+<li>纯心理波</li>
+</ul>
+<h3 id="ERP成分命名"><a href="#ERP成分命名" class="headerlink" title="ERP成分命名"></a>ERP成分命名</h3><ul>
+<li>按出现顺序：N1、P1</li>
+<li>按潜伏期：N170，潜伏期170ms的负波</li>
+<li>按功能意义：eg：失匹配负波</li>
+</ul>
+<h3 id="ERP成分举例"><a href="#ERP成分举例" class="headerlink" title="ERP成分举例"></a>ERP成分举例</h3><ul>
+<li>CNV（受情绪、心理影响产生）</li>
+<li>N400（脑语言加工原理常用）<ul>
+<li>例如：“我想喝牛奶” 牛奶歧议词就会诱发N400</li>
+</ul>
+</li>
+</ul>
+<h2 id="EGI脑电硬件设备"><a href="#EGI脑电硬件设备" class="headerlink" title="EGI脑电硬件设备"></a>EGI脑电硬件设备</h2><h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>电极帽</li>
+<li>放大器</li>
+<li>模数转换</li>
+<li>光纤</li>
+<li>记录软件及电脑</li>
+<li>刺激呈现软件及电脑</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>电极布局：国际10-20系统</p>
+<h2 id="脑电数据分析"><a href="#脑电数据分析" class="headerlink" title="脑电数据分析"></a>脑电数据分析</h2>
         </div>
 
         
@@ -241,29 +285,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2018/07/14/DAY3/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">交互设计暑假总结3</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2018/07/03/DAY1/"
+                           href="/2021/04/08/%E5%80%9F%E5%8A%A9vizard%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E%E7%8E%AF%E5%A2%83/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">交互设计暑假总结1</span>
+                                <span class="post-nav-title-item">借助vizard创建虚拟现实环境</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -372,7 +401,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DAY2"><span class="nav-text">DAY2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80"><span class="nav-text">问题一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%89"><span class="nav-text">问题三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B2%E4%BA%BA"><span class="nav-text">盲人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%81%E4%BA%BA"><span class="nav-text">老人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%EF%BC%88-%E4%BB%BB%E7%A5%9A%E6%89%BF%E5%AD%A6%E9%95%BF%EF%BC%89"><span class="nav-text">交互设计知识整理（@任祚承学长）</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EEG-ERP%E7%9A%84%E7%94%9F%E7%90%86%E6%9C%BA%E5%88%B6"><span class="nav-text">EEG&#x2F;ERP的生理机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EEG%E7%9A%84%E4%BF%A1%E5%8F%B7%E8%AE%B0%E5%BD%95"><span class="nav-text">EEG的信号记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ERP%E5%9F%BA%E7%A1%80"><span class="nav-text">ERP基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Event-Related-Potentials%EF%BC%8C%E4%BA%8B%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%94%B5%E4%BD%8D%EF%BC%89"><span class="nav-text">Event-Related Potentials，事件相关电位）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ERP%E7%A0%94%E7%A9%B6%E7%9A%84%E7%BB%8F%E5%85%B8%E8%8C%83%E5%BC%8F"><span class="nav-text">ERP研究的经典范式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81ERP%E6%88%90%E5%88%86%E5%88%86%E7%B1%BB"><span class="nav-text">常见ERP成分分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ERP%E6%88%90%E5%88%86%E5%91%BD%E5%90%8D"><span class="nav-text">ERP成分命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ERP%E6%88%90%E5%88%86%E4%B8%BE%E4%BE%8B"><span class="nav-text">ERP成分举例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EGI%E8%84%91%E7%94%B5%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87"><span class="nav-text">EGI脑电硬件设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E6%88%90"><span class="nav-text">组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%91%E7%94%B5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="nav-text">脑电数据分析</span></a></li></ol>
     </div>
 </div>
         </aside>
