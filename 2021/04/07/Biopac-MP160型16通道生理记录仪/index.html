@@ -206,7 +206,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>289 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>291 字</span>
         </span>
     
     
@@ -227,7 +227,7 @@
 <p>晚到了没听到前面TT</p>
 <h2 id="心电图"><a href="#心电图" class="headerlink" title="心电图"></a>心电图</h2><ul>
 <li>EGG100C</li>
-<li>左右手、左右脚，四线</li>
+<li>左手、右脚，左脚接地，三线</li>
 <li>通常选择norm模式</li>
 <li>注意接地，避免信号干扰</li>
 <li>主要识别指标：心率、心率变性分析</li>
@@ -388,11 +388,80 @@
 
     
         <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E7%94%B5%E5%9B%BE"><span class="nav-text">心电图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%82%8C%E7%94%B5"><span class="nav-text">肌电</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9A%AE%E7%94%B5"><span class="nav-text">皮电</span></a></li></ol>
-    </div>
-</div>
+            .post-toc-wrap {
+  width: 100%;
+  font-size: 0.92rem;
+  box-sizing: border-box;
+
+  .post-toc {
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0 2px 12px 10px;
+      text-align: left;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      > ol {
+        padding-left: 0;
+      }
+
+      a {
+        transition-property: all;
+        transition();
+      }
+    }
+
+
+    .nav-item {
+      line-height: 1.8;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+
+    .nav {
+      .nav-child {
+        display: hexo-config('toc.expand_all') ? block : none;
+      }
+
+      .active > .nav-child {
+        display: block;
+      }
+
+      .active-current > .nav-child {
+        display: block;
+
+        > .nav-item {
+          display: block;
+        }
+      }
+
+
+      .nav-number, .nav-text {
+        color: var(--default-text-color);
+      }
+
+      .active > a {
+        .nav-number, .nav-text {
+          color: var(--primary-color);
+        }
+      }
+
+      .active-current > a {
+        .nav-number, .nav-text {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+
         </aside>
     
 
